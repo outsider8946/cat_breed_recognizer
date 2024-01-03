@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
-from template_model import CatModel
+from model.template_model import CatModel
 
 label_map = {0:'bengal', 1:'maine_coon', 2:'ragdoll', 3:'oriental_shorthair', 4:'british_shorthair', 5:'siamese'}
 def preporcessing_img(filepath:str):
@@ -31,8 +31,8 @@ def main(argv):
             print('This file does not exist! May be path is incorrect.')
             return -1
 
-        model_path = '../model/cat_breed_classifier.pt'
-        if not os.path.isfile(model_path):
+        model_path = 'model/cat_breed_classifier.pt'
+        if not os.path.exists(model_path):
             print('Model does not exist! Model must be in same folder with run file.')
             return -1
 
