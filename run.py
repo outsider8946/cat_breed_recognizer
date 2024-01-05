@@ -50,7 +50,9 @@ def main(argv):
         ax.imshow(img)
         rect = patches.Rectangle((bounds[0]*width,bounds[1]*height),bounds[2]*width,bounds[3]*height,linewidth=1, edgecolor='r', facecolor='none')
         ax.add_patch(rect)
-        plt.text(bounds[0]*width, bounds[1]*height, label_map[int(labels.argmax())], bbox=dict(fill=True, edgecolor='red', linewidth=2,color='red'))
+        probabilty = int(float(format(labels.max(),'.2f'))*100)
+        text = label_map[int(labels.argmax())] + f' {probabilty}%'
+        plt.text(bounds[0]*width, bounds[1]*height, text, bbox=dict(fill=True, edgecolor='red', linewidth=2,color='red'))
         plt.show()
 
 
