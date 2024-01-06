@@ -1,6 +1,8 @@
 # cat_breed_recognizer
 This is simple recognizer of several cats breed.
 
+Available breeds fo recognize: ragdoll, oriental shorthair, british shorthair, mainecoon, siamese, bengal
+
 Instance:
 
 ![Instanse](https://github.com/outsider8946/cat_breed_recognizer/assets/106751978/b6a20263-8617-45f7-bcb4-df756552552f)
